@@ -11,3 +11,6 @@ export * from './classification/index.js';
 export * from './text/index.js';
 export * from './geo/index.js';
 export * from './content/index.js';
+export * from './summarization/index.js';
+export * from './tagging/index.js';
+export * from './recommender/index.js';
