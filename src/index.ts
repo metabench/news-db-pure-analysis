@@ -9,3 +9,5 @@ export * from './sentiment/index.js';
 export * from './trends/index.js';
 export * from './classification/index.js';
 export * from './text/index.js';
+export * from './geo/index.js';
+export * from './content/index.js';
