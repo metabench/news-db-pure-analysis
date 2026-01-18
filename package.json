@@ -1,0 +1,23 @@
+{
+    "name": "news-db-pure-analysis",
+    "version": "1.0.0",
+    "description": "Pure Functional Business Logic for News Platform (Zero IO)",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "test": "vitest",
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "lint": "tsc --noEmit"
+    },
+    "dependencies": {
+        "date-fns": "^3.0.0",
+        "zod": "^3.22.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.0",
+        "tsup": "^8.0.0",
+        "vitest": "^1.2.0"
+    }
+}
