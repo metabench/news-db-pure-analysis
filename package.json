@@ -1,6 +1,6 @@
 {
     "name": "news-db-pure-analysis",
-    "version": "1.0.0",
+    "version": "0.0.2",
     "description": "Pure Functional Business Logic for News Platform (Zero IO)",
     "type": "module",
     "main": "./dist/index.cjs",
