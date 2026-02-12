@@ -30,7 +30,7 @@ export function fnv1a64(str: string): bigint {
  * @param minLength - Minimum word length (default: 2)
  * @returns Array of lowercase tokens
  */
-export function tokenize(text: string, minLength: number = 2): string[] {
+function tokenize(text: string, minLength: number = 2): string[] {
     return text
         .toLowerCase()
         .replace(/[^\w\s]/g, ' ')

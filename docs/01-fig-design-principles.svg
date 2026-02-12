@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200">
+  <defs>
+    <style>
+      .box { rx: 12; ry: 12; stroke-width: 2; }
+      .label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .sublabel { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: #64748b; text-anchor: middle; }
+      .connector { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 6 4; }
+    </style>
+  </defs>
+  <!-- Pure Functions -->
+  <rect class="box" x="20" y="40" width="150" height="120" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="label" x="95" y="90">Pure Functions</text>
+  <text class="sublabel" x="95" y="110">No side effects</text>
+  <text class="sublabel" x="95" y="126">Deterministic</text>
+  <!-- Zero IO -->
+  <rect class="box" x="200" y="40" width="150" height="120" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="label" x="275" y="90">Zero IO</text>
+  <text class="sublabel" x="275" y="110">No network/fs/db</text>
+  <text class="sublabel" x="275" y="126">Data passed in</text>
+  <!-- Type Safety -->
+  <rect class="box" x="380" y="40" width="150" height="120" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="label" x="455" y="90">Type Safety</text>
+  <text class="sublabel" x="455" y="110">TypeScript types</text>
+  <text class="sublabel" x="455" y="126">Zod validation</text>
+  <!-- Composable -->
+  <rect class="box" x="560" y="40" width="150" height="120" fill="#f3e8ff" stroke="#a855f7"/>
+  <text class="label" x="635" y="90">Composable</text>
+  <text class="sublabel" x="635" y="110">Small functions</text>
+  <text class="sublabel" x="635" y="126">Chain freely</text>
+  <!-- Connectors -->
+  <line class="connector" x1="170" y1="100" x2="200" y2="100"/>
+  <line class="connector" x1="350" y1="100" x2="380" y2="100"/>
+  <line class="connector" x1="530" y1="100" x2="560" y2="100"/>
+</svg>

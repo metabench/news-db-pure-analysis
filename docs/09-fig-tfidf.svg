@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 170">
+  <defs>
+    <style>
+      .tf-box { rx: 8; ry: 8; stroke-width: 2; }
+      .tf-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .tf-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .tf-formula { font-family: 'Courier New', monospace; font-size: 9px; fill: #475569; text-anchor: middle; }
+      .tf-arrow { stroke: #f59e0b; stroke-width: 2; marker-end: url(#tf-tip); }
+    </style>
+    <marker id="tf-tip" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Input: Text -->
+  <rect class="tf-box" x="10" y="35" width="90" height="55" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text class="tf-label" x="55" y="57">Text</text>
+  <text class="tf-sub" x="55" y="74">+ dfMap</text>
+
+  <line class="tf-arrow" x1="100" y1="62" x2="125" y2="62"/>
+
+  <!-- Tokenize + Stem -->
+  <rect class="tf-box" x="125" y="25" width="110" height="75" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="tf-label" x="180" y="50">Tokenize</text>
+  <text class="tf-sub" x="180" y="66">- stopwords</text>
+  <text class="tf-sub" x="180" y="80">simpleStem()</text>
+
+  <line class="tf-arrow" x1="235" y1="62" x2="260" y2="45"/>
+  <line class="tf-arrow" x1="235" y1="62" x2="260" y2="85"/>
+
+  <!-- TF -->
+  <rect class="tf-box" x="260" y="15" width="120" height="50" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="tf-label" x="320" y="37">TF</text>
+  <text class="tf-formula" x="320" y="53">0.5+0.5*(c/max)</text>
+
+  <!-- IDF -->
+  <rect class="tf-box" x="260" y="75" width="120" height="50" fill="#f3e8ff" stroke="#a855f7"/>
+  <text class="tf-label" x="320" y="97">IDF</text>
+  <text class="tf-formula" x="320" y="113">log((N+1)/(df+1))+1</text>
+
+  <!-- Multiply -->
+  <line class="tf-arrow" x1="380" y1="40" x2="420" y2="62"/>
+  <line class="tf-arrow" x1="380" y1="100" x2="420" y2="72"/>
+
+  <rect class="tf-box" x="420" y="40" width="80" height="45" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="tf-label" x="460" y="60">TF * IDF</text>
+  <text class="tf-sub" x="460" y="76">score</text>
+
+  <line class="tf-arrow" x1="500" y1="62" x2="530" y2="62"/>
+
+  <!-- Sort + Top N -->
+  <rect class="tf-box" x="530" y="35" width="80" height="55" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="tf-label" x="570" y="57">Sort</text>
+  <text class="tf-sub" x="570" y="74">Top N</text>
+
+  <line class="tf-arrow" x1="610" y1="62" x2="635" y2="62"/>
+
+  <!-- Output -->
+  <rect class="tf-box" x="635" y="35" width="55" height="55" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="tf-label" x="662" y="57">Keywords</text>
+  <text class="tf-sub" x="662" y="74">[]</text>
+
+  <!-- Bottom note -->
+  <text class="tf-sub" x="350" y="150">dfMap keys must be stemmed to match. Build externally from your corpus.</text>
+</svg>

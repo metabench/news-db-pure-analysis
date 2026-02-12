@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520">
+  <defs>
+    <style>
+      .mod { rx: 10; ry: 10; stroke-width: 2; }
+      .mod-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .mod-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .heading { font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; fill: #0f172a; text-anchor: middle; font-weight: 700; }
+      .layer-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #475569; font-weight: 600; }
+      .layer-bg { rx: 8; ry: 8; fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1; }
+    </style>
+  </defs>
+  <text class="heading" x="380" y="30">news-db-pure-analysis Module Architecture</text>
+
+  <!-- Content Analysis Layer -->
+  <rect class="layer-bg" x="15" y="50" width="730" height="110"/>
+  <text class="layer-label" x="25" y="70">Content Analysis</text>
+  <rect class="mod" x="30" y="80" width="130" height="65" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="mod-label" x="95" y="105">Text</text>
+  <text class="mod-sub" x="95" y="120">tokenize, ngrams</text>
+  <rect class="mod" x="175" y="80" width="130" height="65" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="mod-label" x="240" y="105">Sentiment</text>
+  <text class="mod-sub" x="240" y="120">lexicon scoring</text>
+  <rect class="mod" x="320" y="80" width="130" height="65" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="mod-label" x="385" y="105">Summarization</text>
+  <text class="mod-sub" x="385" y="120">TextRank</text>
+  <rect class="mod" x="465" y="80" width="130" height="65" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="mod-label" x="530" y="105">Tagging</text>
+  <text class="mod-sub" x="530" y="120">TF-IDF keywords</text>
+  <rect class="mod" x="610" y="80" width="120" height="65" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="mod-label" x="670" y="105">Recommender</text>
+  <text class="mod-sub" x="670" y="120">cos, jaccard, etc</text>
+
+  <!-- Classification Layer -->
+  <rect class="layer-bg" x="15" y="175" width="730" height="110"/>
+  <text class="layer-label" x="25" y="195">Classification &amp; Detection</text>
+  <rect class="mod" x="30" y="205" width="170" height="65" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="mod-label" x="115" y="230">Classification</text>
+  <text class="mod-sub" x="115" y="245">decision trees</text>
+  <rect class="mod" x="215" y="205" width="170" height="65" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="mod-label" x="300" y="230">Content</text>
+  <text class="mod-sub" x="300" y="245">categories, confidence</text>
+  <rect class="mod" x="400" y="205" width="170" height="65" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="mod-label" x="485" y="230">Clustering</text>
+  <text class="mod-sub" x="485" y="245">SimHash, grouping</text>
+
+  <!-- Intelligence Layer -->
+  <rect class="layer-bg" x="15" y="300" width="730" height="110"/>
+  <text class="layer-label" x="25" y="320">Intelligence &amp; Signals</text>
+  <rect class="mod" x="30" y="330" width="170" height="65" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="mod-label" x="115" y="355">Trends</text>
+  <text class="mod-sub" x="115" y="370">z-score trending</text>
+  <rect class="mod" x="215" y="330" width="170" height="65" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="mod-label" x="300" y="355">Quality</text>
+  <text class="mod-sub" x="300" y="370">anomaly detection</text>
+  <rect class="mod" x="400" y="330" width="170" height="65" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="mod-label" x="485" y="355">Geo</text>
+  <text class="mod-sub" x="485" y="370">hub URL prediction</text>
+
+  <!-- Planning Layer -->
+  <rect class="layer-bg" x="15" y="425" width="730" height="85"/>
+  <text class="layer-label" x="25" y="445">Crawl Operations</text>
+  <rect class="mod" x="30" y="455" width="200" height="45" fill="#f3e8ff" stroke="#a855f7"/>
+  <text class="mod-label" x="130" y="483">Planning</text>
+</svg>

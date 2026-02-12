@@ -30,7 +30,7 @@ export const UrlPatternSchema = z.object({
 export type UrlPattern = z.infer<typeof UrlPatternSchema>;
 
 // --- Default Patterns ---
-const DEFAULT_COUNTRY_PATTERNS: UrlPattern[] = [
+export const DEFAULT_COUNTRY_PATTERNS: UrlPattern[] = [
     { pattern: '/location/{slug}', weight: 1.2, isPrefix: false },
     { pattern: '/world/{slug}', weight: 1.1, isPrefix: false },
     { pattern: '/news/{slug}', weight: 1.0, isPrefix: false },
@@ -41,7 +41,7 @@ const DEFAULT_COUNTRY_PATTERNS: UrlPattern[] = [
     { pattern: '/international/{slug}', weight: 0.6, isPrefix: false }
 ];
 
-const DEFAULT_CITY_PATTERNS: UrlPattern[] = [
+export const DEFAULT_CITY_PATTERNS: UrlPattern[] = [
     { pattern: '/local/{slug}', weight: 1.2, isPrefix: false },
     { pattern: '/city/{slug}', weight: 1.1, isPrefix: false },
     { pattern: '/news/{slug}', weight: 1.0, isPrefix: false },

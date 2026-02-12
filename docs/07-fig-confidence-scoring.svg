@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 200">
+  <defs>
+    <style>
+      .cs-box { rx: 8; ry: 8; stroke-width: 2; }
+      .cs-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .cs-pct { font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; fill: #3b82f6; text-anchor: middle; font-weight: 700; }
+      .cs-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .cs-bar { rx: 4; ry: 4; }
+      .cs-level { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: white; text-anchor: middle; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Title Quality -->
+  <rect class="cs-box" x="20" y="20" width="180" height="90" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="cs-pct" x="110" y="52">30%</text>
+  <text class="cs-label" x="110" y="72">Title Quality</text>
+  <text class="cs-sub" x="110" y="90">Length, patterns, validity</text>
+
+  <!-- Content Length -->
+  <rect class="cs-box" x="220" y="20" width="180" height="90" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="cs-pct" x="310" y="52" fill="#22c55e">50%</text>
+  <text class="cs-label" x="310" y="72">Content Length</text>
+  <text class="cs-sub" x="310" y="90">100-500-10000 word scale</text>
+
+  <!-- Metadata -->
+  <rect class="cs-box" x="420" y="20" width="180" height="90" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="cs-pct" x="510" y="52" fill="#f59e0b">20%</text>
+  <text class="cs-label" x="510" y="72">Metadata</text>
+  <text class="cs-sub" x="510" y="90">author + date + section</text>
+
+  <!-- Score bar -->
+  <text class="cs-label" x="330" y="140">Combined Score (0.0 - 1.0)</text>
+
+  <!-- Level bars -->
+  <rect class="cs-bar" x="60" y="150" width="120" height="24" fill="#ef4444"/>
+  <text class="cs-level" x="120" y="166">LOW < 0.3</text>
+
+  <rect class="cs-bar" x="180" y="150" width="120" height="24" fill="#f59e0b"/>
+  <text class="cs-level" x="240" y="166">MEDIUM 0.3+</text>
+
+  <rect class="cs-bar" x="300" y="150" width="120" height="24" fill="#3b82f6"/>
+  <text class="cs-level" x="360" y="166">GOOD 0.6+</text>
+
+  <rect class="cs-bar" x="420" y="150" width="120" height="24" fill="#22c55e"/>
+  <text class="cs-level" x="480" y="166">HIGH 0.8+</text>
+</svg>

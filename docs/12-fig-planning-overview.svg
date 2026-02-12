@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200">
+  <defs>
+    <style>
+      .po-box { rx: 8; ry: 8; stroke-width: 2; }
+      .po-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .po-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .po-score { font-family: 'Courier New', monospace; font-size: 18px; text-anchor: middle; font-weight: 700; }
+      .po-arrow { stroke: #6366f1; stroke-width: 2; marker-end: url(#po-tip); }
+    </style>
+    <marker id="po-tip" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- Input signals -->
+  <rect class="po-box" x="10" y="20" width="140" height="150" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text class="po-label" x="80" y="45">URL Signals</text>
+  <text class="po-sub" x="80" y="65">visits</text>
+  <text class="po-sub" x="80" y="80">lastVisited</text>
+  <text class="po-sub" x="80" y="95">lastChanged</text>
+  <text class="po-sub" x="80" y="110">topicRelevance</text>
+  <text class="po-sub" x="80" y="125">hubDepth</text>
+  <text class="po-sub" x="80" y="140">isHub</text>
+
+  <line class="po-arrow" x1="150" y1="95" x2="180" y2="95"/>
+
+  <!-- Scoring Engine -->
+  <rect class="po-box" x="180" y="20" width="260" height="150" fill="#eff6ff" stroke="#6366f1"/>
+  <text class="po-label" x="310" y="42">Scoring Engine (base: 50)</text>
+  <line x1="190" y1="48" x2="430" y2="48" stroke="#c7d2fe" stroke-width="1"/>
+
+  <!-- Factors -->
+  <rect x="195" y="55" width="100" height="24" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+  <text class="po-sub" x="245" y="71">Freshness -30/+15</text>
+
+  <rect x="195" y="85" width="100" height="24" rx="4" fill="#dcfce7" stroke="#86efac"/>
+  <text class="po-sub" x="245" y="101">Changed +20</text>
+
+  <rect x="195" y="115" width="100" height="24" rx="4" fill="#dbeafe" stroke="#93c5fd"/>
+  <text class="po-sub" x="245" y="131">Relevance +0-15</text>
+
+  <rect x="310" y="55" width="100" height="24" rx="4" fill="#f3e8ff" stroke="#d8b4fe"/>
+  <text class="po-sub" x="360" y="71">Hub +10</text>
+
+  <rect x="310" y="85" width="100" height="24" rx="4" fill="#fef3c7" stroke="#fde68a"/>
+  <text class="po-sub" x="360" y="101">Depth -5</text>
+
+  <rect x="310" y="115" width="100" height="24" rx="4" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text class="po-sub" x="360" y="131">Clamp [0,100]</text>
+
+  <line class="po-arrow" x1="440" y1="95" x2="470" y2="95"/>
+
+  <!-- Output -->
+  <rect class="po-box" x="470" y="30" width="110" height="130" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="po-label" x="525" y="55">ScoredUrl</text>
+  <text class="po-score" x="525" y="95" fill="#22c55e">87</text>
+  <text class="po-sub" x="525" y="115">reasons[]</text>
+  <text class="po-sub" x="525" y="130">url</text>
+
+  <line class="po-arrow" x1="580" y1="95" x2="610" y2="95"/>
+
+  <!-- Rank -->
+  <rect class="po-box" x="610" y="40" width="80" height="110" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="po-label" x="650" y="65">Rank</text>
+  <text class="po-score" x="650" y="95" fill="#22c55e">94</text>
+  <text class="po-score" x="650" y="115" fill="#3b82f6">87</text>
+  <text class="po-score" x="650" y="135" fill="#f59e0b">42</text>
+</svg>

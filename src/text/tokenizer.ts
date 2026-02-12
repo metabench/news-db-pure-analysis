@@ -5,7 +5,7 @@
  */
 
 // Common English stopwords
-const STOPWORDS = new Set([
+export const STOPWORDS = new Set([
     'a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
     'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
     'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',

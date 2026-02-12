@@ -25,10 +25,10 @@ const DEFAULT_LEXICON: Record<string, number> = {
 };
 
 // Negation words that flip sentiment
-const NEGATORS = new Set(['not', 'no', 'never', 'neither', "n't", 'none', 'nobody', 'nothing']);
+export const NEGATORS = new Set(['not', 'no', 'never', 'neither', "n't", 'none', 'nobody', 'nothing']);
 
 // Amplifiers that boost sentiment
-const AMPLIFIERS: Record<string, number> = {
+export const AMPLIFIERS: Record<string, number> = {
     'very': 1.5, 'really': 1.3, 'extremely': 2.0, 'absolutely': 1.8,
     'incredibly': 1.7, 'completely': 1.5, 'totally': 1.4
 };

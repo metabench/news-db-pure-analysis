@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200">
+  <defs>
+    <style>
+      .sm-box { rx: 10; ry: 10; stroke-width: 2; }
+      .sm-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #1e293b; text-anchor: middle; font-weight: 700; }
+      .sm-formula { font-family: 'Courier New', monospace; font-size: 10px; fill: #475569; text-anchor: middle; }
+      .sm-range { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .sm-use { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9px; fill: #94a3b8; text-anchor: middle; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Cosine -->
+  <rect class="sm-box" x="10" y="20" width="165" height="160" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="sm-label" x="92" y="48">Cosine</text>
+  <text class="sm-formula" x="92" y="72">A.B / (||A||*||B||)</text>
+  <text class="sm-range" x="92" y="96">Range: [0, 1]</text>
+  <text class="sm-range" x="92" y="114">Magnitude-free</text>
+  <text class="sm-use" x="92" y="140">Best for: TF-IDF vectors</text>
+  <text class="sm-use" x="92" y="155">document comparison</text>
+
+  <!-- Jaccard -->
+  <rect class="sm-box" x="190" y="20" width="165" height="160" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="sm-label" x="272" y="48">Jaccard</text>
+  <text class="sm-formula" x="272" y="72">|A&cap;B| / |A&cup;B|</text>
+  <text class="sm-range" x="272" y="96">Range: [0, 1]</text>
+  <text class="sm-range" x="272" y="114">Set-based</text>
+  <text class="sm-use" x="272" y="140">Best for: tag overlap</text>
+  <text class="sm-use" x="272" y="155">keyword sets</text>
+
+  <!-- Dot Product -->
+  <rect class="sm-box" x="370" y="20" width="165" height="160" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="sm-label" x="452" y="48">Dot Product</text>
+  <text class="sm-formula" x="452" y="72">sum(A[i]*B[i])</text>
+  <text class="sm-range" x="452" y="96">Range: unbounded</text>
+  <text class="sm-range" x="452" y="114">Magnitude-dependent</text>
+  <text class="sm-use" x="452" y="140">Best for: weighted sums</text>
+  <text class="sm-use" x="452" y="155">raw correlation</text>
+
+  <!-- Euclidean -->
+  <rect class="sm-box" x="550" y="20" width="165" height="160" fill="#f3e8ff" stroke="#a855f7"/>
+  <text class="sm-label" x="632" y="48">Euclidean</text>
+  <text class="sm-formula" x="632" y="72">sqrt(sum(diff^2))</text>
+  <text class="sm-range" x="632" y="96">Range: [0, &infin;)</text>
+  <text class="sm-range" x="632" y="114">Distance (not similarity)</text>
+  <text class="sm-use" x="632" y="140">Best for: spatial proximity</text>
+  <text class="sm-use" x="632" y="155">clustering</text>
+</svg>

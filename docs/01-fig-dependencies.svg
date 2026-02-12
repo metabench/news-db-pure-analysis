@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340">
+  <defs>
+    <style>
+      .node { rx: 8; ry: 8; stroke-width: 2; }
+      .node-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .arrow { stroke: #ef4444; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .standalone { stroke: #22c55e; fill: #dcfce7; }
+      .dependent { stroke: #3b82f6; fill: #dbeafe; }
+      .shared { stroke: #f59e0b; fill: #fef3c7; }
+      .legend { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: #475569; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <rect x="470" y="10" width="12" height="12" rx="2" class="standalone" stroke-width="1"/>
+  <text class="legend" x="488" y="21">Standalone (no internal deps)</text>
+  <rect x="470" y="30" width="12" height="12" rx="2" class="dependent" stroke-width="1"/>
+  <text class="legend" x="488" y="41">Has internal dependencies</text>
+  <rect x="470" y="50" width="12" height="12" rx="2" class="shared" stroke-width="1"/>
+  <text class="legend" x="488" y="61">Shared dependency target</text>
+
+  <!-- Shared: Text -->
+  <rect class="node shared" x="270" y="20" width="120" height="40"/>
+  <text class="node-label" x="330" y="46">Text</text>
+
+  <!-- Shared: Recommender -->
+  <rect class="node shared" x="270" y="280" width="120" height="40"/>
+  <text class="node-label" x="330" y="306">Recommender</text>
+
+  <!-- Dependent: Summarization -->
+  <rect class="node dependent" x="80" y="150" width="130" height="40"/>
+  <text class="node-label" x="145" y="176">Summarization</text>
+
+  <!-- Dependent: Tagging -->
+  <rect class="node dependent" x="260" y="150" width="130" height="40"/>
+  <text class="node-label" x="325" y="176">Tagging</text>
+
+  <!-- Dependent: Clustering/grouper -->
+  <rect class="node dependent" x="440" y="150" width="140" height="40"/>
+  <text class="node-label" x="510" y="176">Clustering</text>
+
+  <!-- Standalone modules -->
+  <rect class="node standalone" x="20" y="280" width="100" height="36"/>
+  <text class="node-label" x="70" y="303">Sentiment</text>
+  <rect class="node standalone" x="135" y="280" width="100" height="36"/>
+  <text class="node-label" x="185" y="303">Trends</text>
+  <rect class="node standalone" x="420" y="280" width="100" height="36"/>
+  <text class="node-label" x="470" y="303">Quality</text>
+  <rect class="node standalone" x="535" y="280" width="100" height="36"/>
+  <text class="node-label" x="585" y="303">Planning</text>
+  <rect class="node standalone" x="420" y="230" width="100" height="36"/>
+  <text class="node-label" x="470" y="253">Geo</text>
+  <rect class="node standalone" x="535" y="230" width="120" height="36"/>
+  <text class="node-label" x="595" y="253">Classification</text>
+  <rect class="node standalone" x="420" y="84" width="100" height="36"/>
+  <text class="node-label" x="470" y="107">Content</text>
+
+  <!-- Arrows: depends on -->
+  <!-- Summarization -> Text -->
+  <path class="arrow" d="M145,150 L145,100 L270,55"/>
+  <!-- Summarization -> Recommender -->
+  <path class="arrow" d="M145,190 L145,240 L270,295"/>
+  <!-- Tagging -> Text -->
+  <path class="arrow" d="M325,150 L330,60"/>
+  <!-- Clustering -> types (internal) -->
+</svg>

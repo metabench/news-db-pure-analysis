@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220">
+  <defs>
+    <style>
+      .co-box { rx: 10; ry: 10; stroke-width: 2; }
+      .co-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .co-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .co-arrow { stroke: #3b82f6; stroke-width: 2; marker-end: url(#co-tip); }
+      .co-header { font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; fill: #0f172a; text-anchor: middle; font-weight: 700; }
+    </style>
+    <marker id="co-tip" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Input -->
+  <rect class="co-box" x="10" y="60" width="130" height="90" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text class="co-label" x="75" y="90">Page Data</text>
+  <text class="co-sub" x="75" y="108">URL</text>
+  <text class="co-sub" x="75" y="122">Content signals</text>
+  <text class="co-sub" x="75" y="136">Extraction data</text>
+
+  <line class="co-arrow" x1="140" y1="90" x2="175" y2="70"/>
+  <line class="co-arrow" x1="140" y1="120" x2="175" y2="145"/>
+
+  <!-- Category Detection -->
+  <rect class="co-box" x="175" y="30" width="200" height="75" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="co-label" x="275" y="55">Category Detection</text>
+  <text class="co-sub" x="275" y="72">URL pattern matching</text>
+  <text class="co-sub" x="275" y="86">Content signal analysis</text>
+
+  <!-- Confidence Scoring -->
+  <rect class="co-box" x="175" y="120" width="200" height="75" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="co-label" x="275" y="145">Confidence Scoring</text>
+  <text class="co-sub" x="275" y="162">Title + Length + Metadata</text>
+  <text class="co-sub" x="275" y="176">Weighted: 30% + 50% + 20%</text>
+
+  <line class="co-arrow" x1="375" y1="67" x2="420" y2="67"/>
+  <line class="co-arrow" x1="375" y1="157" x2="420" y2="157"/>
+
+  <!-- Outputs -->
+  <rect class="co-box" x="420" y="30" width="170" height="75" fill="#eff6ff" stroke="#93c5fd"/>
+  <text class="co-label" x="505" y="55">CategoryResult[]</text>
+  <text class="co-sub" x="505" y="72">category: "opinion"</text>
+  <text class="co-sub" x="505" y="86">confidence: 0.8</text>
+
+  <rect class="co-box" x="420" y="120" width="170" height="75" fill="#f0fdf4" stroke="#86efac"/>
+  <text class="co-label" x="505" y="145">ConfidenceResult</text>
+  <text class="co-sub" x="505" y="162">score: 0.85</text>
+  <text class="co-sub" x="505" y="176">level: "high"</text>
+
+  <!-- Final -->
+  <line class="co-arrow" x1="590" y1="67" x2="620" y2="100"/>
+  <line class="co-arrow" x1="590" y1="157" x2="620" y2="120"/>
+  <rect class="co-box" x="620" y="80" width="90" height="50" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="co-label" x="665" y="102">Decision</text>
+  <text class="co-sub" x="665" y="118">keep / flag</text>
+</svg>

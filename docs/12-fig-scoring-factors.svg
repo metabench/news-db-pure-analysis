@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">
+  <defs>
+    <style>
+      .sf-bar { rx: 4; ry: 4; stroke-width: 1; }
+      .sf-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: #1e293b; font-weight: 600; }
+      .sf-value { font-family: 'Courier New', monospace; font-size: 11px; fill: #1e293b; text-anchor: end; font-weight: 700; }
+      .sf-note { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9px; fill: #94a3b8; }
+      .sf-base { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #1e293b; text-anchor: middle; font-weight: 700; }
+      .sf-header { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #0f172a; font-weight: 700; }
+    </style>
+  </defs>
+
+  <text class="sf-header" x="20" y="22">Priority Score Adjustments (from base 50)</text>
+
+  <!-- Base line -->
+  <line x1="280" y1="40" x2="280" y2="220" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text class="sf-base" x="280" y="235">Base: 50</text>
+
+  <!-- Freshness: recent -->
+  <text class="sf-label" x="20" y="62">Recently visited (&lt;1h)</text>
+  <rect class="sf-bar" x="160" y="50" width="120" height="18" fill="#fee2e2" stroke="#fca5a5"/>
+  <text class="sf-value" x="155" y="64">-30</text>
+
+  <!-- Freshness: stale -->
+  <text class="sf-label" x="20" y="92">Stale (&gt;7 days)</text>
+  <rect class="sf-bar" x="280" y="80" width="60" height="18" fill="#dcfce7" stroke="#86efac"/>
+  <text class="sf-value" x="345" y="94">+15</text>
+
+  <!-- Changed -->
+  <text class="sf-label" x="20" y="122">Changed in 24h</text>
+  <rect class="sf-bar" x="280" y="110" width="80" height="18" fill="#dcfce7" stroke="#86efac"/>
+  <text class="sf-value" x="365" y="124">+20</text>
+
+  <!-- Relevance -->
+  <text class="sf-label" x="20" y="152">Topic relevance (max)</text>
+  <rect class="sf-bar" x="280" y="140" width="60" height="18" fill="#dbeafe" stroke="#93c5fd"/>
+  <text class="sf-value" x="345" y="154">+15</text>
+
+  <!-- Hub -->
+  <text class="sf-label" x="20" y="182">Is hub page</text>
+  <rect class="sf-bar" x="280" y="170" width="40" height="18" fill="#f3e8ff" stroke="#d8b4fe"/>
+  <text class="sf-value" x="325" y="184">+10</text>
+
+  <!-- Depth -->
+  <text class="sf-label" x="20" y="212">Deep URL (&gt;3)</text>
+  <rect class="sf-bar" x="260" y="200" width="20" height="18" fill="#fee2e2" stroke="#fca5a5"/>
+  <text class="sf-value" x="255" y="214">-5</text>
+</svg>

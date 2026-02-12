@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220">
+  <defs>
+    <style>
+      .zs-box { rx: 8; ry: 8; stroke-width: 2; }
+      .zs-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .zs-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .zs-formula { font-family: 'Courier New', monospace; font-size: 11px; fill: #1e293b; text-anchor: middle; }
+      .zs-arrow { stroke: #6366f1; stroke-width: 2; marker-end: url(#zs-tip); }
+      .zs-zone { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: white; text-anchor: middle; font-weight: 600; }
+    </style>
+    <marker id="zs-tip" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- Bell curve approximation -->
+  <path d="M 100,160 Q 150,158 200,150 Q 250,110 300,50 Q 350,10 400,50 Q 450,110 500,150 Q 550,158 600,160" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- Zones -->
+  <rect x="170" y="162" width="80" height="20" rx="4" fill="#ef4444"/>
+  <text class="zs-zone" x="210" y="177">z &lt; -2</text>
+
+  <rect x="250" y="162" width="100" height="20" rx="4" fill="#f59e0b"/>
+  <text class="zs-zone" x="300" y="177">-2 to -1</text>
+
+  <rect x="350" y="162" width="100" height="20" rx="4" fill="#22c55e"/>
+  <text class="zs-zone" x="400" y="177">Normal</text>
+
+  <rect x="450" y="162" width="80" height="20" rx="4" fill="#f59e0b"/>
+  <text class="zs-zone" x="490" y="177">1 to 2</text>
+
+  <rect x="530" y="162" width="70" height="20" rx="4" fill="#ef4444"/>
+  <text class="zs-zone" x="565" y="177">z > 2</text>
+
+  <!-- Center line -->
+  <line x1="400" y1="5" x2="400" y2="160" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text class="zs-sub" x="400" y="198">mean</text>
+
+  <!-- Formula -->
+  <rect class="zs-box" x="200" y="5" width="300" height="30" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text class="zs-formula" x="350" y="25">z = (value - mean) / stddev</text>
+
+  <!-- Labels -->
+  <text class="zs-sub" x="130" y="145">Anomaly</text>
+  <text class="zs-sub" x="130" y="157">(below)</text>
+  <text class="zs-sub" x="580" y="145">Anomaly</text>
+  <text class="zs-sub" x="580" y="157">(above)</text>
+
+  <!-- Module labels -->
+  <text class="zs-label" x="180" y="215">Quality: detectAnomalies</text>
+  <text class="zs-label" x="500" y="215">Trends: detectTrends</text>
+</svg>

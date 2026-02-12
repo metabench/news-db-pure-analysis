@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 180">
+  <defs>
+    <style>
+      .td-box { rx: 8; ry: 8; stroke-width: 2; }
+      .td-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #1e293b; text-anchor: middle; font-weight: 600; }
+      .td-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; fill: #64748b; text-anchor: middle; }
+      .td-code { font-family: 'Courier New', monospace; font-size: 10px; fill: #475569; text-anchor: middle; }
+      .td-arrow { stroke: #6366f1; stroke-width: 2; marker-end: url(#td-tip); }
+    </style>
+    <marker id="td-tip" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- Input -->
+  <rect class="td-box" x="10" y="40" width="120" height="80" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text class="td-label" x="70" y="65">Topic Counts</text>
+  <text class="td-code" x="70" y="82">counts[0]=today</text>
+  <text class="td-code" x="70" y="96">counts[1..]=history</text>
+
+  <line class="td-arrow" x1="130" y1="80" x2="155" y2="80"/>
+
+  <!-- Baseline -->
+  <rect class="td-box" x="155" y="40" width="130" height="80" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="td-label" x="220" y="65">Baseline</text>
+  <text class="td-code" x="220" y="82">mean(history)</text>
+  <text class="td-code" x="220" y="96">stddev(history)</text>
+
+  <line class="td-arrow" x1="285" y1="80" x2="310" y2="80"/>
+
+  <!-- Z-Score -->
+  <rect class="td-box" x="310" y="40" width="130" height="80" fill="#f3e8ff" stroke="#a855f7"/>
+  <text class="td-label" x="375" y="65">Z-Score</text>
+  <text class="td-code" x="375" y="82">(current-mean)</text>
+  <text class="td-code" x="375" y="96">  / stddev</text>
+
+  <line class="td-arrow" x1="440" y1="80" x2="465" y2="80"/>
+
+  <!-- Decision -->
+  <rect class="td-box" x="465" y="40" width="110" height="80" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="td-label" x="520" y="65">Threshold</text>
+  <text class="td-code" x="520" y="82">z >= sigma?</text>
+  <text class="td-code" x="520" y="96">default: 2.0</text>
+
+  <line class="td-arrow" x1="575" y1="80" x2="600" y2="80"/>
+
+  <!-- Output -->
+  <rect class="td-box" x="600" y="40" width="90" height="80" fill="#dcfce7" stroke="#22c55e"/>
+  <text class="td-label" x="645" y="62">Result</text>
+  <text class="td-code" x="645" y="80">isTrending</text>
+  <text class="td-code" x="645" y="94">zScore</text>
+  <text class="td-code" x="645" y="108">%change</text>
+
+  <!-- Bottom note -->
+  <text class="td-sub" x="350" y="150">Sorted by z-score descending. Topics with &lt; minBaseline history points are skipped.</text>
+</svg>

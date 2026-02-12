@@ -8,27 +8,42 @@
 import { z } from 'zod';
 
 // --- Types ---
-export const ConditionSchema = z.object({
+// --- Types ---
+export type Condition = {
+    type: 'url_matches' | 'text_contains' | 'compare' | 'flag' | 'and' | 'or';
+    pattern?: string;
+    field?: string;
+    operator?: '>' | '<' | '>=' | '<=' | '==' | '!=';
+    value?: any;
+    conditions?: Condition[];
+};
+
+export const ConditionSchema: z.ZodType<Condition> = z.lazy(() => z.object({
     type: z.enum(['url_matches', 'text_contains', 'compare', 'flag', 'and', 'or']),
     pattern: z.string().optional(),
     field: z.string().optional(),
     operator: z.enum(['>', '<', '>=', '<=', '==', '!=']).optional(),
     value: z.any().optional(),
-    conditions: z.array(z.lazy(() => ConditionSchema)).optional()
-});
+    conditions: z.array(ConditionSchema).optional()
+}));
 
-export type Condition = z.infer<typeof ConditionSchema>;
+export type DecisionNode = {
+    id: string;
+    condition?: Condition;
+    yes?: DecisionNode;
+    no?: DecisionNode;
+    result?: boolean;
+    confidence?: number;
+};
 
-export const DecisionNodeSchema: z.ZodType<any> = z.object({
+export const DecisionNodeSchema: z.ZodType<DecisionNode> = z.lazy(() => z.object({
     id: z.string(),
     condition: ConditionSchema.optional(),
-    yes: z.lazy(() => DecisionNodeSchema).optional(),
-    no: z.lazy(() => DecisionNodeSchema).optional(),
+    yes: DecisionNodeSchema.optional(),
+    no: DecisionNodeSchema.optional(),
     result: z.boolean().optional(),
     confidence: z.number().optional()
-});
-
-export type DecisionNode = z.infer<typeof DecisionNodeSchema>;
+}));
 
 export interface EvaluationContext {
     url?: string;
