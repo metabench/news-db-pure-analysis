@@ -135,9 +135,13 @@ export function predictHubUrls(
  */
 export function predictCountryHubUrls(
     domain: string,
-    country: PlaceMetadata
+    country: PlaceMetadata,
+    inferredPatterns?: UrlPattern[]
 ): { url: string; weight: number }[] {
-    return predictHubUrls(domain, country, DEFAULT_COUNTRY_PATTERNS);
+    const combined = inferredPatterns && inferredPatterns.length > 0
+        ? [...inferredPatterns, ...DEFAULT_COUNTRY_PATTERNS]
+        : DEFAULT_COUNTRY_PATTERNS;
+    return predictHubUrls(domain, country, combined);
 }
 
 /**
